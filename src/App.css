@@ -188,6 +188,83 @@ body {
   opacity: 0.8;
 }
 
+/* 過濾器樣式 */
+.filter-section {
+  background: #f8f9fa;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.filter-section h3 {
+  margin: 0 0 15px 0;
+  color: #495057;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.filter-group input {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: flex-end;
+}
+
+.reset-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  background-color: #6c757d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #545b62;
+}
+
+.filter-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #495057;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {
@@ -203,12 +280,26 @@ body {
     gap: 1rem;
   }
   
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group {
+    min-width: auto;
+  }
+  
+  .filter-actions {
+    justify-content: center;
+  }
+  
   .main-content {
     padding: 1rem;
   }
   
   .data-table {
     font-size: 0.85rem;
+    min-width: 600px;
   }
   
   .data-table th,
@@ -219,6 +310,10 @@ body {
   .refresh-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+  
+  .table-container {
+    overflow-x: auto;
   }
 }
 
